@@ -1,0 +1,67 @@
+body {
+    background-color: #121212;
+}
+
+h1, p {
+    color: #fff;
+}
+
+.app {
+    display: grid;
+    place-items: center;
+    margin-top: 10rem;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+}
+
+.card {
+    background-color: #313131;
+    border-radius: 1rem;
+    text-align: center;
+    width: 20rem;
+    height: fit-content;
+}
+
+img {
+    width: 10rem;
+    border-radius: 100%;
+    border: 3px solid yellow;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    margin-top: 3rem;
+    font-size: 1rem;
+    margin-bottom: 3rem;
+    padding: 1rem;
+}
+
+.bottom span:last-child {
+    margin-top: 1rem;
+}
+
+button {
+    padding: 2rem;
+    background-color: #1A1A1A;
+    border-radius: .5rem;
+    border: none;
+    color: #fff;
+    margin-top: 3rem;
+    cursor: pointer;
+}
+
+.male {
+    border: 3px solid cyan;
+}
+
+.female {
+    border: 3px solid pink;
+}

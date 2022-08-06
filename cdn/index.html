@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random User Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="app">
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="top">
+                    <!-- rending the firstname and lastname -->
+                    <h1>{{ firstName }} {{ lastName }}</h1>
+                </div>
+
+                <div class="img">
+                    <!-- making the img class a vue class so we can require one of our values in it -->
+                    <!-- makeing the the src and v-bind:src so we can add the data we get from the api -->
+                    <!-- making the alt the same as the source so we can render the users name and lastname incase the image does not render -->
+                    <img :class="gender" v-bind:src="picture" :alt="`${firstName} ${lastName}`">
+                </div>
+
+                <!-- rendering the users email and gender -->
+                <div class="bottom">
+                    <span>Email: {{ email }}</span>
+                    <span>Gender: {{ gender }}</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- adding an event listening so we can run the getUser function on the click -->
+        <!-- making the class a vue class so we can make the gender the class -->
+        <button v-on:click="getUser" :class="gender">Generate Random User</button>
+
+    </div>
+
+    <!-- injecting the vuejs cdn script -->
+    <!-- injecting the app.js script -->
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="app.js"></script>
+</body>
+</html>
